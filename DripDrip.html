@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+
+<h1>Total: <span id="total">0</span><BR></h1>
+
+<button id="incrementButton">Drip</button>
+<button id="incrementButton2">DripDrip</button>
+<button id="incrementButton10">Splash!</button>
+<BR>~~~<BR>
+<button id="resetBut">Reset</button>
+
+<script>
+  let total = 0;
+  
+  function updateTotal() {
+    document.getElementById('total').textContent = total;
+  }
+
+  document.getElementById('incrementButton').addEventListener('click', function() {
+    total += 1;
+    updateTotal();
+  });
+  document.getElementById('incrementButton2').addEventListener('click', function() {
+    total += 2;
+    updateTotal();
+  });
+  document.getElementById('incrementButton10').addEventListener('click', function() {
+    total += 10;
+    updateTotal();
+  });
+  document.getElementById('resetBut').addEventListener('click', function() {
+    total = 0;
+    updateTotal();
+  });
+</script>
+
+</html>
